@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-03-03T17:17:18 PKT" name="Suite" finished-at="2023-03-03T17:26:20 PKT" duration-ms="541416">
+    <groups>
+    </groups>
+    <test started-at="2023-03-03T17:17:18 PKT" name="Test" finished-at="2023-03-03T17:26:20 PKT" duration-ms="541416">
+      <class name="com.testcases.DarticanAutomation.Currency">
+        <test-method is-config="true" signature="login()[pri:0, instance:com.testcases.DarticanAutomation.Currency@49d904ec]" started-at="2023-03-03T17:17:26 PKT" name="login" description="enter credentials and hit enter button" finished-at="2023-03-03T17:18:10 PKT" duration-ms="43354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="mouseover()[pri:0, instance:com.testcases.DarticanAutomation.Currency@49d904ec]" started-at="2023-03-03T17:18:10 PKT" name="mouseover" description="mouse over function" finished-at="2023-03-03T17:18:16 PKT" duration-ms="5755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mouseover -->
+        <test-method signature="ValidationErrors()[pri:1, instance:com.testcases.DarticanAutomation.Currency@49d904ec]" started-at="2023-03-03T17:18:16 PKT" name="ValidationErrors" finished-at="2023-03-03T17:19:16 PKT" duration-ms="60336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidationErrors -->
+        <test-method signature="AddCurrency()[pri:2, instance:com.testcases.DarticanAutomation.Currency@49d904ec]" started-at="2023-03-03T17:19:16 PKT" name="AddCurrency" finished-at="2023-03-03T17:22:17 PKT" duration-ms="181225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddCurrency -->
+        <test-method signature="EditCurrency()[pri:3, instance:com.testcases.DarticanAutomation.Currency@49d904ec]" started-at="2023-03-03T17:22:17 PKT" name="EditCurrency" finished-at="2023-03-03T17:25:09 PKT" duration-ms="171646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EditCurrency -->
+        <test-method signature="Deletecurrency()[pri:4, instance:com.testcases.DarticanAutomation.Currency@49d904ec]" started-at="2023-03-03T17:25:09 PKT" name="Deletecurrency" finished-at="2023-03-03T17:26:20 PKT" duration-ms="70830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Deletecurrency -->
+        <test-method is-config="true" signature="columnname(org.testng.ITestResult)[pri:0, instance:com.testcases.DarticanAutomation.Currency@49d904ec]" started-at="2023-03-03T17:26:20 PKT" name="columnname" finished-at="1970-01-01T05:00:00 PKT" duration-ms="-1677846380056" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @AfterClass annotated columnname.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @AfterClass annotated columnname.
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:437)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:351)
+at org.testng.internal.Parameters.createParameters(Parameters.java:708)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:299)
+at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- columnname -->
+      </class> <!-- com.testcases.DarticanAutomation.Currency -->
+      <class name="com.testcases.DarticanAutomation.Configuration">
+        <test-method signature="Browser()[pri:0, instance:com.testcases.DarticanAutomation.Configuration@3ba9ad43]" started-at="2023-03-03T17:17:18 PKT" name="Browser" finished-at="2023-03-03T17:17:26 PKT" duration-ms="8186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.testcases.DarticanAutomation.Configuration@3ba9ad43]" started-at="2023-03-03T17:26:20 PKT" name="endReport" finished-at="2023-03-03T17:26:20 PKT" duration-ms="595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.testcases.DarticanAutomation.Configuration -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

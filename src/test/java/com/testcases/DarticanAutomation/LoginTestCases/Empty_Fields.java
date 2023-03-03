@@ -1,0 +1,103 @@
+package com.testcases.DarticanAutomation.LoginTestCases;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.LogStatus;
+import com.testcases.DarticanAutomation.Configuration;
+
+public class Empty_Fields {
+	
+public static WebDriver driver;
+	
+
+	
+	@Test (description = "Enter credentials and hit enter button",priority =1)
+		
+		public void login() 
+			{
+		
+				String titleexpected = "Compensation Planning";
+			
+				try 
+				{
+						WebDriverWait wait = new WebDriverWait(Configuration.driver, 20);
+						Configuration.logger = Configuration.extent.startTest("Empty Fields");
+						
+						String titleread = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/p[1]"))).getText();
+						Assert.assertEquals(titleread, titleexpected);
+						
+						if(titleread.equals(titleexpected))
+						{
+							Configuration.logger.log(LogStatus.INFO, titleexpected);
+						}
+				}
+				catch(Exception e)
+				{
+						Configuration.logger.log(LogStatus.FAIL,e);
+				}
+		
+				
+				try 
+				{
+						Configuration.logger.log(LogStatus.INFO, "Empty Username");
+						Configuration.driver.findElement(By.xpath("//input[@type='text']")).sendKeys("");
+						Configuration.logger.log(LogStatus.INFO, "Empty Password");
+						Configuration.driver.findElement(By.xpath("//input[@type='password']")).sendKeys("");
+						
+						Configuration.logger.log(LogStatus.INFO, "Click Login button,'Show Error'");
+						Configuration.driver.findElement(By.xpath("//button[@type='submit']")).click();
+						Thread.sleep(10000);
+				} 
+				catch (Exception e)
+				{
+						// TODO: handle the exception
+						Configuration.logger.log(LogStatus.FAIL,e);
+				}
+				
+				
+				String usernameerrorexpected = "The Username field is required.";
+				String passworderrorexpected = "The Password field is required.";
+				
+				try 
+				{
+						WebDriverWait wait = new WebDriverWait(Configuration.driver, 20);
+						
+						String usernameerrorread = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/form/div[1]/ul/li[1]"))).getText();
+						Assert.assertEquals(usernameerrorread, usernameerrorexpected);
+						
+						if(usernameerrorread.equals(usernameerrorexpected))
+						{
+							Configuration.logger.log(LogStatus.INFO, usernameerrorexpected);
+						}
+				}
+				catch(Exception e)
+				{
+						Configuration.logger.log(LogStatus.FAIL,e);
+				}
+				
+				
+				try 
+				{
+						WebDriverWait wait = new WebDriverWait(Configuration.driver, 20);
+						
+						String passworderrorread = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div/div/div[2]/div/div[1]/div[2]/form/div[1]/ul/li[2]"))).getText();
+						Assert.assertEquals(passworderrorread, passworderrorexpected);
+						
+						if(passworderrorread.equals(passworderrorexpected))
+						{
+							Configuration.logger.log(LogStatus.INFO, passworderrorexpected);
+						}
+				}
+				catch(Exception e)
+				{
+						Configuration.logger.log(LogStatus.FAIL,e);
+				}
+				
+	}
+
+}
